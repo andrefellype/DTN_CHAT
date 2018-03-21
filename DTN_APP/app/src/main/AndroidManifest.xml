@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.edu.ifnmg.dtnchat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".BeginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".service.ServicePushCliente"
+            android:exported="false"
+            android:label="ServicePushCliente">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="PUSH_CLIENTE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.ServiceSendMensagem"
+            android:exported="false"
+            android:label="ServiceSendMensagem">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="SEND_MENSAGEM" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.ServicePushMensagem"
+            android:exported="false"
+            android:label="ServicePushMensagem">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="PUSH_MENSAGEM" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.ServiceCheckMensagem"
+            android:exported="false"
+            android:label="ServiceCheckMensagem">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="CHECK_MENSAGEM" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".service.BroadcastPushCliente"
+            android:label="BroadcastPushCliente"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.BroadcastSendMensagem"
+            android:label="BroadcastSendMensagem"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.BroadcastPushMensagem"
+            android:label="BroadcastPushMensagem"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.BroadcastCheckMensagem"
+            android:label="BroadcastCheckMensagem"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MensagemActivity"
+            android:label="@string/title_activity_mensagem"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SendMensagemActivity"
+            android:label="@string/title_activity_send_mensagem"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

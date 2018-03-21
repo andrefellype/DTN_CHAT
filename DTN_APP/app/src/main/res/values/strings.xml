@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">DTN CHAT</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">DTN CHAT - ACESSO</string>
+
+    <string name="tv_aguarde">Aguarde enquanto será redirecionado para outro página.</string>
+
+    <string name="hint_nome">NOME*</string>
+    <string name="hint_telefone">TELEFONE*</string>
+    <string name="hint_ip">IP*</string>
+    <string name="hint_porta">PORTA*</string>
+
+    <string name="tv_nome">Nome</string>
+    <string name="tv_telefone">Telefone</string>
+    <string name="tv_ip">IP</string>
+    <string name="tv_porta">Porta</string>
+
+    <string name="btn_conectar">CONECTAR</string>
+    <string name="btn_enviar">ENVIAR</string>
+    <string name="btn_cancelar">CANCELAR</string>
+    <string name="btn_salvar">SALVAR</string>
+
+    <string name="nav_mensagens">Mensagens</string>
+    <string name="nav_clientes">Clientes</string>
+    <string name="nav_dados">Dados</string>
+    <string name="nav_sair">Sair</string>
+
+    <string name="title_activity_mensagem">MENSAGENS</string>
+    <string name="title_activity_send_mensagem">ENVIAR MENSAGEM</string>
+    <string name="title_activity_clientes">CLIENTES</string>
+</resources>
